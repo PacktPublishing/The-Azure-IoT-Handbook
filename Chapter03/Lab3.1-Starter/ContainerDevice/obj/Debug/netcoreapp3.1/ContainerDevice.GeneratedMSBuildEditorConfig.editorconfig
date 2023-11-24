@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ContainerDevice
+build_property.ProjectDir = c:\AZ220Labs\05-Individual Enrollment of Device in DPS\Starter\ContainerDevice\

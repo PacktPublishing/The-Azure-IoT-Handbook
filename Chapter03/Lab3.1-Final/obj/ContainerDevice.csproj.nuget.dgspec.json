@@ -1,0 +1,97 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\TE_titles\\Testing\\B19626\\chapter03_lab\\Starter\\ContainerDevice\\ContainerDevice.csproj": {}
+  },
+  "projects": {
+    "C:\\TE_titles\\Testing\\B19626\\chapter03_lab\\Starter\\ContainerDevice\\ContainerDevice.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\TE_titles\\Testing\\B19626\\chapter03_lab\\Starter\\ContainerDevice\\ContainerDevice.csproj",
+        "projectName": "ContainerDevice",
+        "projectPath": "C:\\TE_titles\\Testing\\B19626\\chapter03_lab\\Starter\\ContainerDevice\\ContainerDevice.csproj",
+        "packagesPath": "C:\\Users\\RajatSharma\\.nuget\\packages\\",
+        "outputPath": "C:\\TE_titles\\Testing\\B19626\\chapter03_lab\\Starter\\ContainerDevice\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\RajatSharma\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Azure.Devices.Client": {
+              "target": "Package",
+              "version": "[1.*, )"
+            },
+            "Microsoft.Azure.Devices.Provisioning.Transport.Amqp": {
+              "target": "Package",
+              "version": "[1.*, )"
+            },
+            "Microsoft.Azure.Devices.Provisioning.Transport.Http": {
+              "target": "Package",
+              "version": "[1.*, )"
+            },
+            "Microsoft.Azure.Devices.Provisioning.Transport.Mqtt": {
+              "target": "Package",
+              "version": "[1.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

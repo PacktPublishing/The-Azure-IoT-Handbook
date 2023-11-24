@@ -1,0 +1,29 @@
+Step11
+----------
+
+WITH AnomalyDetectionStep AS
+(
+SELECT
+messageId as messageId,
+deviceId as deviceId,
+EventProcessedUtcTime AS time,
+CAST(temperature AS float) AS temp,
+AnomalyDetection_SpikeAndDip(CAST(temperature AS float),
+95, 120, 'spikesanddips')
+OVER(LIMIT DURATION(second, 120)) AS SpikeAndDipScores
+FROM input
+)
+SELECT
+deviceId,
+messageId,
+time,
+temp,
+CAST(GetRecordPropertyValue(SpikeAndDipScores, 'Score') AS
+float) AS
+SpikeAndDipScore,
+CAST(GetRecordPropertyValue(SpikeAndDipScores, 'IsAnomaly')
+AS bigint) AS
+IsSpikeAndDipAnomaly
+INTO output
+FROM AnomalyDetectionStep
+

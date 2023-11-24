@@ -1,0 +1,97 @@
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.exe
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.deps.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.dev.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Buffers.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Codecs.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Codecs.Mqtt.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Common.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Handlers.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\DotNetty.Transport.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Client.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Shared.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.AssemblyReference.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfoInputs.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfo.cs
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CoreCompileInputs.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CopyComplete
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\Users\DanClark\OneDrive - Microsoft\Documents\firmwareUpdate\obj\Debug\netcoreapp3.1\fwupdatedevice.genruntimeconfig.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.exe
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.deps.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.dev.json
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Buffers.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Codecs.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Codecs.Mqtt.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Common.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Handlers.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Transport.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Client.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Shared.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.AssemblyReference.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfoInputs.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfo.cs
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CoreCompileInputs.cache
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CopyComplete
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\Users\DanClark\OneDrive - Microsoft\Documents\Code\Chapter4\StarterLab4\SimulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.genruntimeconfig.cache
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.AssemblyReference.cache
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.GeneratedMSBuildEditorConfig.editorconfig
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfoInputs.cache
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.AssemblyInfo.cs
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CoreCompileInputs.cache
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.sourcelink.json
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.exe
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.deps.json
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.json
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.runtimeconfig.dev.json
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\fwupdatedevice.pdb
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Buffers.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Codecs.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Codecs.Mqtt.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Common.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Handlers.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\DotNetty.Transport.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Client.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Azure.Devices.Shared.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\Microsoft.WindowsAzure.Storage.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.csproj.CopyComplete
+C:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\obj\Debug\netcoreapp3.1\fwupdatedevice.genruntimeconfig.cache

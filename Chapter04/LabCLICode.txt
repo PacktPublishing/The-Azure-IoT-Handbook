@@ -1,0 +1,25 @@
+location=westus
+
+resourceGroup=iotlabs
+
+iotDeviceName=iothub-Test-Device
+
+randomValue="drc830"
+
+iotHubName=labHub$randomValue
+
+echo "IoT hub name = " $iotHubName
+
+workspaceName=workspace$randomValue
+
+echo "Log Analytics workspace name = " $workspaceName
+
+az group create --name $resourceGroup --location $location
+
+az iot hub create --name $iotHubName --resource-group $resourceGroup --partition-count 2 --sku s1 --location $location
+
+az monitor log-analytics workspace create --resource-group $resourceGroup --workspace-name $workspaceName --location $location
+
+az iot hub device-identity create --device-id $iotDeviceName --hub-name $iotHubName
+
+az iot hub device-identity connection-string show --device-id $iotDeviceName --hub-name $iotHubName

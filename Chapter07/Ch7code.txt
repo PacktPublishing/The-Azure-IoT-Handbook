@@ -1,0 +1,25 @@
+Page 10
+----------
+
+SELECT
+*
+INTO
+[YourOutputAlias]
+FROM
+[YourInputAlias]
+
+
+SELECT *
+FROM InputStream
+WHERE temperature > 30
+
+Aggregation Query:
+SELECT region, COUNT(*) AS count
+FROM InputStream
+GROUP BY region, TumblingWindow(second, 10)
+SELECT A.deviceId, A.temperature, B.location
+FROM TemperatureStream A
+JOIN LocationStream B
+ON A.deviceId = B.deviceId
+
+

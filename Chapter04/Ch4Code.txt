@@ -1,0 +1,106 @@
+Page 5
+----------
+
+var query = registryManager.CreateQuery(
+    "SELECT * FROM devices WHERE tags.location.plant = 'HBG'
+    AND properties.reported.connectivity.type = 'cellular'", 100);
+
+var twinsInHBGUsingCellular = await query.GetNextAsTwinAsync();
+
+Console.WriteLine("Devices in HBG using cellular network: {0}",
+    string.Join(", ", twinsInHBGUsingCellular.Select(t => t.DeviceId)));
+
+Page 6
+----------
+
+// Handle desired properties updates to the pressure component
+
+twin.on('properties.desired.components.pressure', function(delta) {
+    if (delta.minPressure || delta.maxpressure) {
+        console.log(chalk.green('\nUpdating desired pressure in pressure component:'));
+        console.log('Updating minimum pressure: ' + twin.properties.desired.components.pressure.minPressure);
+        console.log('Updating maximum pressure: ' + twin.properties.desired.components.pressure.maxPressure);
+        // Call code to reset the pressure
+        // Update the reported properties and send them to the hub
+        reportedPropertiesPatch.minPressure = twin.properties.desired.components.climate.minPressure;
+        reportedPropertiesPatch.maxPressure = twin.properties.desired.components.climate.maxPressure;
+        sendReportedProperties();
+        }
+    }
+);
+
+
+private static async void ReceiveMessage()
+{
+    Console.WriteLine("\nReceiving messages.");
+    while (true)
+    {
+        Message receivedMessage = await deviceClient.ReceiveAsync();
+        if (receivedMessage == null) continue;
+            Console.WriteLine("Received message: {0}",Encoding.ASCII.GetString(receivedMessage.GetBytes()));
+        await deviceClient.CompleteAsync(receivedMessage);
+    }
+}
+
+Page 7
+----------
+
+private static async Task InvokeMethodAsync(string deviceId,ServiceClient serviceClient),
+{
+    var methodInvocation = new CloudToDeviceMethod("SetTelemetryInterval")
+    {
+        ResponseTimeout = TimeSpan.FromSeconds(30),
+    };
+    methodInvocation.SetPayloadJson("10");
+    Console.WriteLine($"Invoking direct method for device: {deviceId}");
+    // Invoke the direct method asynchronously and get the response fromthe simulated device.
+    CloudToDeviceMethodResult response = await serviceClient.InvokeDeviceMethodAsync(deviceId, methodInvocation);
+    Console.WriteLine($"Response status: {response.Status}, payload:\n\t{response.GetPayloadAsJson()}");
+}
+
+Page 8
+----------
+
+await s_deviceClient.SetMethodHandlerAsync("SetTelemetryInterval",SetTelemetryInterval, null);
+
+private static Task<MethodResponse> SetTelemetryInterval(MethodRequest methodRequest, object userContext)
+{
+  string data = Encoding.UTF8.GetString(methodRequest.Data);
+  // Check the payload is a single integer value.
+  if (int.TryParse(data, out int telemetryIntervalInSeconds))
+  {
+    s_telemetryInterval = TimeSpan.FromSeconds(telemetryIntervalInSeconds);
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine($"Telemetry interval set to {s_telemetryInterval}");
+    Console.ResetColor();
+    // Acknowledge the direct method call with a 200 success message.
+    string result = $"{{\"result\":\"Executed direct method:{methodRequest.Name}\"}}";
+    return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 200));
+  }
+  else
+  {
+    // Acknowledge the direct method call with a 400 error message.
+    string result = "{\"result\":\"Invalid parameter\"}";
+    return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
+  }
+}
+
+Page 12
+----------
+public static async Task StartMethodJob(string jobId)
+{
+  CloudToDeviceMethod directMethod =
+    new CloudToDeviceMethod("TurnLightOff", TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(10));
+  JobResponse result = await jobClient.
+  ScheduleDeviceMethodAsync(jobId,
+  $"DeviceId IN ['{deviceId}']", directMethod, DateTime.UtcNow, (long)TimeSpan.FromMinutes(5).TotalSeconds);
+  Console.WriteLine("Started Method Job");
+}
+
+Page 14
+----------
+
+AzureDiagnostics
+| where ResourceProvider == "MICROSOFT.DEVICES" and ResourceType == "IOTHUBS"
+| where Category == "Connections" and Level == "Error"
+

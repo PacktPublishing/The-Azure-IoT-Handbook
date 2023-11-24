@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = fwupdatedevice
+build_property.ProjectDir = c:\TE_titles\Testing\B19626\Github_code\The-Azure-IoT-Handbook\Chapter04\StarterLab4\simulatedDevice\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

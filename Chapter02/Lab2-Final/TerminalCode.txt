@@ -1,0 +1,9 @@
+mkdir Device02
+Cd Device02
+dotnet new console
+dotnet add package Microsoft.Azure.Devices.Client
+
+
+
+az extension add --name azure-iot
+az iot hub monitor-events --hub-name myIoTHub

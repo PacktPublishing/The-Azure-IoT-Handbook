@@ -1,0 +1,837 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Devices.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Devices.AuthenticationType">
+            <summary>
+            Used to specify the authentication type used by a device.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.AuthenticationType.Sas">
+            <summary>
+            Shared Access Key
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.AuthenticationType.SelfSigned">
+            <summary>
+            Self-signed certificate
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.AuthenticationType.CertificateAuthority">
+            <summary>
+            Certificate Authority
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.AuthenticationType.None">
+            <summary>
+            No Authentication Token at this scope
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.ConfigurationInfo">
+            <summary>
+            Details of the Configuration
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.ConfigurationInfo.Status">
+            <summary>
+            Configuration status.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.ConfigurationStatus">
+            <summary>
+            Specifies the configuration status.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.ConfigurationStatus.Targeted">
+            <summary>
+            Configuration targeted.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.ConfigurationStatus.Applied">
+            <summary>
+            Configuration applied.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.DeviceCapabilities">
+            <summary>
+            Status of Capabilities enabled on the device
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.DeviceCapabilities.IotEdge">
+            <summary>
+            IoT Edge capability.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.ETagHolder">
+            <summary>
+            ETag Holder.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.ETagHolder.ETag">
+            <summary>
+            ETag value.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.IETagHolder">
+            <summary>
+            ETag Holder Interface
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.IETagHolder.ETag">
+            <summary>
+            ETag value
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.Metadata">
+            <summary>
+            <see cref="T:Microsoft.Azure.Devices.Shared.Metadata"/> for properties in <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.Metadata.#ctor(System.DateTime,System.Nullable{System.Int64})">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Azure.Devices.Shared.Metadata"/>
+            </summary>
+            <param name="lastUpdated"></param>
+            <param name="lastUpdatedVersion"></param>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Metadata.LastUpdated">
+            <summary>
+            Time when a property was last updated
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Metadata.LastUpdatedVersion">
+            <remarks>
+            This SHOULD be null for Reported properties metadata and MUST not be null for Desired properties metadata.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SdkAssignsMessageId">
+            <summary>
+            The different configurations available for setting a value of MessageId on an IoT hub message.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.SdkAssignsMessageId.Never">
+            <summary>
+            MessageId is set only by the user.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.SdkAssignsMessageId.WhenUnset">
+            <summary>
+            If MessageId is not set by the user, the client library will set it to a random GUID before sending the message.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SecurityProvider">
+            <summary>
+            The Security Provider used by ProvisioningDeviceClient for authentication.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProvider.GetRegistrationID">
+            <summary>
+            Gets the Registration Id used during device enrollment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProvider.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the SecurityProvider and optionally disposes of the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to releases only unmanaged resources.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProvider.Dispose">
+            <summary>
+            Releases the unmanaged resources and disposes of the managed resources used by the invoker.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey">
+            <summary>
+            The Device Security Provider interface for Symmetric Keys.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the SecurityProviderSymmetricKey class.
+            </summary>
+            <param name="registrationId">The Provisioning service Registration Id for this device.</param>
+            <param name="primaryKey">The primary key for this device.</param>
+            <param name="secondaryKey">The secondary key for this device.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey.GetRegistrationID">
+            <summary>
+            Gets the Registration Id used during device enrollment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey.GetPrimaryKey">
+            <summary>
+            Gets the primary key.
+            </summary>
+            <returns>primary key</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey.GetSecondaryKey">
+            <summary>
+            Gets the secondary key.
+            </summary>
+            <returns>secondary key</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderSymmetricKey.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to releases only unmanaged resources.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SecurityProviderTpm">
+            <summary>
+            The Device Security Provider interface for TPM Hardware Security Modules.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the SecurityProviderTpm class.
+            </summary>
+            <param name="registrationId">The Provisioning service Registration Id for this device.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.GetRegistrationID">
+            <summary>
+            Gets the Registration Id used during device enrollment.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.GetEndorsementKey">
+            <summary>
+            Gets the Base64 encoded EndorsementKey.
+            </summary>
+            <returns>Base64 encoded EK.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.GetStorageRootKey">
+            <summary>
+            Gets the Base64 encoded StorageRootKey.
+            </summary>
+            <returns>Base64 encoded SRK.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.ActivateIdentityKey(System.Byte[])">
+            <summary>
+            Activates an identity key within the TPM device.
+            </summary>
+            <param name="encryptedKey">The encrypted identity key.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderTpm.Sign(System.Byte[])">
+            <summary>
+            Signs the data using the previously activated identity key.
+            </summary>
+            <param name="data">The data to be signed.</param>
+            <returns>The signed data.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SecurityProviderX509">
+            <summary>
+            The device security provider interface for X.509-based hardware security modules.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509.GetRegistrationID">
+            <summary>
+            Returns the registration Id.
+            </summary>
+            <returns>The registration Id.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509.GetAuthenticationCertificateChain">
+            <summary>
+            Gets the certificate trust chain that will end in the Trusted Root installed on the server side.
+            </summary>
+            <returns>The certificate chain.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509.GetAuthenticationCertificate">
+            <summary>
+            Gets the certificate used for TLS device authentication.
+            </summary>
+            <returns>The client certificate used during TLS communications.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.SecurityProviderX509Certificate">
+            <summary>
+            The Device Security Client for X509 authentication using a certificate object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509Certificate.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.X509Certificate2Collection)">
+            <summary>
+            Initializes a new instance of the SecurityProviderX509Certificate class.
+            </summary>
+            <param name="clientCertificate">
+            The client certificate used for authentication. The private key should be available in the <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> object,
+            or should be available in the certificate store of the system where the client will be authenticated from.
+            </param>
+            <param name="certificateChain">
+            The certificate chain leading to the root certificate uploaded to the device provisioning service.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509Certificate.GetAuthenticationCertificate">
+            <summary>
+            Gets the certificate trust chain that will end in the Trusted Root installed on the server side.
+            </summary>
+            <returns>The certificate chain.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509Certificate.GetAuthenticationCertificateChain">
+            <summary>
+            Gets the certificate used for TLS device authentication.
+            </summary>
+            <returns>The client certificate used during TLS communications.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.SecurityProviderX509Certificate.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the SecurityProviderX509Certificate and optionally disposes of the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to releases only unmanaged resources.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TlsVersions">
+            <summary>
+            A common place to specify TLS information for the project, when the code must be explicit or a user requires an override.
+            </summary>
+            <remarks>
+            As newer TLS versions come out, we should simply update them here and have all code that needs to
+            know reference this class so they all get updated and we don't risk missing a line.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.TlsVersions.Instance">
+            <summary>
+            A static instance of this class to be used by the Azure IoT .NET SDKs when opening connections
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TlsVersions.#ctor">
+            <summary>
+            Internal constructor for testing. The SDK and users should use the static Instance property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TlsVersions.MinimumTlsVersions">
+            <summary>
+            The acceptable versions of TLS to use when the SDK must be explicit.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TlsVersions.Preferred">
+            <summary>
+            The version of TLS to use by default.
+            </summary>
+            <remarks>
+            Defaults to "None", which means let the OS decide the proper TLS version (SChannel in Windows / OpenSSL in Linux).
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TlsVersions.CertificateRevocationCheck">
+            <summary>
+            To enable certificate revocation check. Default to be false.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TlsVersions.SetMinimumTlsVersions(System.Security.Authentication.SslProtocols)">
+             <summary>
+             Sets the minimum acceptable versions of TLS.
+             </summary>
+             <remarks>
+             Will ignore a version less than TLS 1.0.
+            
+             Affects:
+             1. MinimumTlsVersions property
+             2. Preferred property
+             3. For .NET framework 4.5.1 over HTTPS or websocket, as it does not offer a "SystemDefault" option, the version must be explicit.
+             </remarks>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TlsVersions.SetLegacyAcceptableVersions">
+            <summary>
+            Sets the acceptable versions of TLS over HTTPS or websocket for .NET framework 4.5.1, as it does not offer a "SystemDefault" option. No-op for other .NET versions. 
+            Sets CheckCertificateRevocationList property to value of CertificateRevocationCheck for .NET framework 4.5.1
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TransportFallbackType">
+            <summary>
+            Defines the transport fall-back types for AMQP and MQTT.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.TransportFallbackType.TcpWithWebSocketFallback">
+            <summary>
+            The transport will fall-back to corresponding websocket if tcp connection fails.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.TransportFallbackType.WebSocketOnly">
+            <summary>
+            WebSocket only connection with no fall-back.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.Shared.TransportFallbackType.TcpOnly">
+            <summary>
+            Tcp only connection with no fall-back.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.Twin">
+            <summary>
+            Twin Representation
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.Twin.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.Twin.#ctor(System.String)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/>
+            </summary>
+            <param name="deviceId">Device Id</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.Twin.#ctor(Microsoft.Azure.Devices.Shared.TwinProperties)">
+            <summary>
+            Creates an instance of <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/>
+            </summary>
+            <param name="twinProperties"></param>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.DeviceId">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.ModelId">
+            <summary>
+            The DTDL model Id of the device.
+            </summary>
+            <remarks>
+            The value will be null for a non-pnp device.
+            The value will be null for a pnp device until the device connects and registers with the model Id.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.ModuleId">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin" /> Module Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Tags">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> tags.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Properties">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Configurations">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> configuration properties. These are read only
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Capabilities">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> capabilities. These are read only.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.ETag">
+            <summary>
+            Twin's ETag
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Version">
+            <summary>
+            Twin's Version
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.Status">
+            <summary>
+            Gets the corresponding Device's Status.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.StatusReason">
+            <summary>
+            Reason, if any, for the corresponding Device to be in specified <see cref="P:Microsoft.Azure.Devices.Shared.Twin.Status"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.StatusUpdatedTime">
+            <summary>
+            Time when the corresponding Device's <see cref="P:Microsoft.Azure.Devices.Shared.Twin.Status"/> was last updated
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.ConnectionState">
+            <summary>
+            Corresponding Device's ConnectionState
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.LastActivityTime">
+            <summary>
+            Time when the corresponding Device was last active
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.CloudToDeviceMessageCount">
+            <summary>
+            Number of messages sent to the corresponding Device from the Cloud
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.AuthenticationType">
+            <summary>
+            Corresponding Device's authentication type
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.X509Thumbprint">
+            <summary>
+            Corresponding Device's X509 thumbprint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.DeviceScope">
+            <summary>
+            The scope of the device. Auto-generated and immutable for edge devices and modifiable in leaf devices to create child/parent relationship.
+            </summary>
+            <remarks>
+            For more information, see <see href="https://docs.microsoft.com/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11#parent-and-child-relationships"/>.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.Twin.ParentScopes">
+            <summary>
+            The scopes of the upper level edge devices if applicable. Only available for edge devices.
+            </summary>
+            <remarks>
+            For more information, see <see href="https://docs.microsoft.com/azure/iot-edge/iot-edge-as-gateway?view=iotedge-2020-11#parent-and-child-relationships"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.Twin.ToJson(Newtonsoft.Json.Formatting)">
+            <summary>
+            Gets the Twin as a JSON string
+            </summary>
+            <param name="formatting">Optional. Formatting for the output JSON string.</param>
+            <returns>JSON string</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TwinCollection">
+            <summary>
+            Represents a collection of properties for <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.#ctor">
+            <summary>
+            Creates instance of <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>.
+            Shouldn't use this constructor since _metadata is null and calling GetLastUpdated can result in NullReferenceException
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.#ctor(System.String)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> using a JSON fragment as the body.
+            </summary>
+            <remarks>
+            Use "JsonConvert.DeserializeObject()" instead of "JObject.Parse()" so that
+            we can take advantage of the internal serializer settings added in SDK and
+            avoid of the unexpected behavior of dropping trailing zeros caused by Newtonsoft.Json.
+            </remarks>
+            <param name="twinJson">JSON fragment containing the twin data.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.#ctor(System.String,System.String)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> using the given JSON fragments for the body and metadata.
+            </summary>
+            <remarks>
+            Use "JsonConvert.DeserializeObject()" instead of "JObject.Parse()" so that
+            we can take advantage of the internal serializer settings added in SDK and
+            avoid of the unexpected behavior of dropping trailing zeros caused by Newtonsoft.Json.
+            </remarks>
+            <param name="twinJson">JSON fragment containing the twin data.</param>
+            <param name="metadataJson">JSON fragment containing the metadata.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.#ctor(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> using a JSON fragment as the body.
+            </summary>
+            <param name="twinJson">JSON fragment containing the twin data.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.#ctor(Newtonsoft.Json.Linq.JObject,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Creates a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> using the given JSON fragments for the body and metadata.
+            </summary>
+            <param name="twinJson">JSON fragment containing the twin data.</param>
+            <param name="metadataJson">JSON fragment containing the metadata.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinCollection.Version">
+            <summary>
+            Gets the version of the <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinCollection.Count">
+            <summary>
+            Gets the count of properties in the Collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinCollection.Item(System.String)">
+            <summary>
+            Property Indexer
+            </summary>
+            <param name="propertyName">Name of the property to get</param>
+            <returns>Value for the given property name</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetMetadata">
+            <summary>
+            Gets the Metadata for this property.
+            </summary>
+            <returns>Metadata instance representing the metadata for this property</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetLastUpdated">
+            <summary>
+            Gets the LastUpdated time for this property
+            </summary>
+            <returns>DateTime instance representing the LastUpdated time for this property</returns>
+            <exception cref="T:System.NullReferenceException">Thrown when the TwinCollection metadata is null.
+            An example would be when the TwinCollection class is created with the default constructor</exception>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetLastUpdatedVersion">
+            <summary>
+            Gets the LastUpdatedVersion for this property.
+            </summary>
+            <returns>LastUpdatdVersion if present, null otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.ToJson(Newtonsoft.Json.Formatting)">
+            <summary>
+            Gets the TwinProperties as a JSON string.
+            </summary>
+            <param name="formatting">Optional. Formatting for the output JSON string.</param>
+            <returns>JSON string</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.Contains(System.String)">
+            <summary>
+            Determines whether the specified property is present.
+            </summary>
+            <param name="propertyName">The property to locate</param>
+            <returns>true if the specified property is present; otherwise, false</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.TryGetMemberInternal(System.String,System.Object@)">
+            <summary>
+            Gets the specified property from the twin collection.
+            </summary>
+            <param name="propertyName">The name of the property to get.</param>
+            <param name="result">The value to return from the property collection.</param>
+            <returns>
+            A <see cref="T:Newtonsoft.Json.Linq.JToken"/> as an <see cref="T:System.Object"/> if the metadata is not present; otherwise it will return a
+            <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>, a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollectionArray"/> or a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollectionValue"/>.
+            </returns>
+            <remarks>
+            If this method is used with a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> returned from a <c>DeviceClient</c> it will always return a
+            <see cref="T:Newtonsoft.Json.Linq.JToken"/>. However, if you are using this method with a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> returned from a
+            <c>RegistryManager</c> client, it will return the corresponding type depending on what is stored in the properties collection.
+            
+            For example a <see cref="T:System.Collections.Generic.List`1"/> would return a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollectionArray"/>, with the metadata intact, when used with
+            a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/> returned from a <c>RegistryManager</c> client. If you need this method to always return a
+            <see cref="T:Newtonsoft.Json.Linq.JToken"/> please see the <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.ClearAllMetadata"/> method for more information.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.ClearMetadata">
+            <summary>
+            Clears metadata out of the twin collection.
+            </summary>
+            <remarks>
+            This will only clear the metadata from the twin collection but will not change the base metadata object. This allows you to still use
+            methods such as <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetMetadata"/>. If you need to remove all metadata, please use <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.ClearAllMetadata"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollection.ClearAllMetadata">
+            <summary>
+            Clears all metadata out of the twin collection as well as the base metadata object.
+            </summary>
+            <remarks>
+            This will remove all metadata from the base metadata object as well as the metadata for the twin collection. The difference from the
+            <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.ClearMetadata"/> method is this will also clear the underlying metadata object which will affect methods such as
+            <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetMetadata"/> and <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.GetLastUpdatedVersion"/>.
+            This method would be useful if you are performing any operations that require <see cref="M:Microsoft.Azure.Devices.Shared.TwinCollection.TryGetMemberInternal(System.String,System.Object@)"/>
+            to return a <see cref="T:Newtonsoft.Json.Linq.JToken"/> regardless of the client you are using.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TwinCollectionArray">
+            <summary>
+            Represents a property array in a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinCollectionArray.Item(System.String)">
+            <summary>
+            Gets the value for the given property name
+            </summary>
+            <param name="propertyName">Property Name to lookup</param>
+            <returns>Property value, if present</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionArray.GetMetadata">
+            <summary>
+            Gets the Metadata for this property
+            </summary>
+            <returns>Metadata instance representing the metadata for this property</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionArray.GetLastUpdated">
+            <summary>
+            Gets the LastUpdated time for this property
+            </summary>
+            <returns>DateTime instance representing the LastUpdated time for this property</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionArray.GetLastUpdatedVersion">
+            <summary>
+            Gets the LastUpdatedVersion for this property
+            </summary>
+            <returns>LastUpdatdVersion if present, null otherwise</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TwinCollectionValue">
+            <summary>
+            Represents a property value in a <see cref="T:Microsoft.Azure.Devices.Shared.TwinCollection"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinCollectionValue.Item(System.String)">
+            <summary>
+            Gets the value for the given property name
+            </summary>
+            <param name="propertyName">Property Name to lookup</param>
+            <returns>Property value, if present</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionValue.GetMetadata">
+            <summary>
+            Gets the Metadata for this property
+            </summary>
+            <returns>Metadata instance representing the metadata for this property</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionValue.GetLastUpdated">
+            <summary>
+            Gets the LastUpdated time for this property
+            </summary>
+            <returns>DateTime instance representing the LastUpdated time for this property</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinCollectionValue.GetLastUpdatedVersion">
+            <summary>
+            Gets the LastUpdatedVersion for this property
+            </summary>
+            <returns>LastUpdatdVersion if present, null otherwise</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TwinJsonConverter">
+            <summary>
+            Converts a <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> to Json.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Converts <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> to its equivalent Json representation.
+            </summary>
+            <param name="writer">the Json writer.</param>
+            <param name="value">the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> to convert.</param>
+            <param name="serializer">the Json serializer.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Converts Json to its equivalent <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> representation.
+            </summary>
+            <param name="reader">the Json reader.</param>
+            <param name="objectType">object type</param>
+            <param name="existingValue">exisiting value</param>
+            <param name="serializer">the Json serializer.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinJsonConverter.CanRead">
+            <summary>
+            Converter Can Read flag
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinJsonConverter.CanWrite">
+            <summary>
+            Value indicating whether this TwinJsonConverter can read JSON
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinJsonConverter.CanConvert(System.Type)">
+            <summary>
+            Value indicating whether this TwinJsonConverter can write JSON
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Shared.TwinProperties">
+            <summary>
+            Represents <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> properties.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Shared.TwinProperties.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Azure.Devices.Shared.TwinProperties"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinProperties.Desired">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> desired properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.Shared.TwinProperties.Reported">
+            <summary>
+            Gets and sets the <see cref="T:Microsoft.Azure.Devices.Shared.Twin"/> reported properties.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.DeviceConnectionState">
+            <summary>
+            Specifies the different connection states of a device.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.DeviceConnectionState.Disconnected">
+            <summary>
+            Represents a device in the Disconnected state.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.DeviceConnectionState.Connected">
+            <summary>
+            Represents a device in the Connected state.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.DeviceStatus">
+            <summary>
+            Specifies the different states of a device.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.DeviceStatus.Enabled">
+            <summary>
+            Indicates that a Device is enabled
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Devices.DeviceStatus.Disabled">
+            <summary>
+            Indicates that a Device is disabled
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.Common.StringFormattingExtensions">
+            <summary>
+            String extension class for common operations.
+            This class is used by the SDK and should not be directly used by applications.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Common.StringFormattingExtensions.FormatForUser(System.String,System.Object[])">
+            <summary>
+            Format string to be displayed.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">The object to format.</param>
+            <returns>A copy of format in which the format item or items have been replaced by the string representation of arg0.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Common.StringFormattingExtensions.FormatInvariant(System.String,System.Object[])">
+            <summary>
+            Format string to be displayed.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">The object to format.</param>
+            <returns>A copy of format in which the format item or items have been replaced by the string representation of arg0.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Common.StringFormattingExtensions.FormatErrorForUser(System.String,System.String,System.Int32)">
+            <summary>
+            Format string to be displayed as an error.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="activityId">The activity Id.</param>
+            <param name="errorCode">The error code.</param>
+            <returns>A copy of format in which the format item or items have been replaced by the string representation of arg0.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Devices.Common.StringFormattingExtensions.Truncate(System.String,System.Int32)">
+            <summary>
+            Truncates a string.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="maximumSize">The maximum string length.</param>
+            <returns>The truncated string.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Devices.X509Thumbprint">
+            <summary>
+            X509 client certificate thumbprints of the device
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.X509Thumbprint.PrimaryThumbprint">
+            <summary>
+            X509 client certificate primary thumbprint
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Devices.X509Thumbprint.SecondaryThumbprint">
+            <summary>
+            X509 client certificate secondary thumbprint
+            </summary>
+        </member>
+    </members>
+</doc>

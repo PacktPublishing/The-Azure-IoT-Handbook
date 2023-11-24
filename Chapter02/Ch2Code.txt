@@ -1,0 +1,173 @@
+Page 5
+---------------------
+import os
+from azure.iot.device import IoTHubDeviceClient
+
+# Connection string for the device
+CONNECTION_STRING = "<your device connection string>"
+
+# Connect to IoT Hub
+client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
+client.connect()
+
+# Send a message to IoT Hub
+message = "Hello, IoT Hub!"
+client.send_message(message)
+print("Message sent to IoT Hub: {}".format(message))
+
+# Receive messages from IoT Hub
+print("Waiting for messages from IoT Hub...")
+while True:
+received_message = client.receive_message()
+print("Received message from IoT Hub: {}".format(received_message.data))
+client.complete_message(received_message)
+
+# Disconnect from IoT Hub
+client.disconnect()
+
+Page 6
+---------------------
+
+import time
+from azure.iot.device import IoTHubDeviceClient, MethodResponse
+
+set_telemetry_interval(request, context):
+
+# Extract the interval value from the request payload
+interval = request.payload
+
+# Set the telemetry interval
+global TELEMETRY_INTERVAL
+TELEMETRY_INTERVAL = interval
+
+# Return a response
+return MethodResponse.create_from_method_request(request, 200,"Success")
+client = IoTHubDeviceClient.create_from_connection_
+string(CONNECTION_STRING)
+client.connect()
+client.on_method_request_received = set_telemetry_interval
+
+# Wait for direct method calls
+while True:
+time.sleep(1)
+
+# Disconnect the device client from the IoT hub
+client.disconnect()
+
+# Cloud side
+from azure.iot.hub import IoTHubRegistryManager
+
+# Connect to the IoT hub
+registry_manager = IoTHubRegistryManager(CONNECTION_STRING)
+device_method_params = {"interval": 10}
+method_result = registry_manager.invoke_device_method(DEVICE_ID,"set_telemetry_interval", device_method_params)
+
+# Print the result
+print(method_result.status)
+print(method_result.payload)
+
+
+Page 7
+---------------------
+
+import random
+import time
+import os
+from azure.iot.device import IoTHubDeviceClient, Message
+
+CONNECTION_STRING = "<your device connection string>"
+
+METHOD_NAME = "start"
+METHOD_PAYLOAD = {"interval": 10}
+
+def method_request_handler(method_request):
+
+    # This function handles incoming direct method requests
+    if method_request.name == METHOD_NAME:
+        print("Received direct method request: {}".format(METHOD_NAME))
+        response_payload = {"result": "Started"}
+        response_status = 200
+    else:
+        response_payload = {"result": "Unknown method"}
+        response_status = 404
+
+    method_response = method_request.create_response(response_status, response_payload)
+    client.send_method_response(method_response)
+
+# Connect to the device
+client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
+
+# Set the method request handler
+client.on_method_request_received = method_request_handler
+
+# Connect to IoT Hub and wait for incoming direct method requests
+client.connect()
+print("Connected to IoT Hub and waiting for direct method requests...")
+while True:
+    try:
+        time.sleep(1)
+    except KeyboardInterrupt:
+        print("Disconnecting from IoT Hub...")
+        break
+
+client.disconnect()
+
+Page 9
+---------------------
+{
+  "deviceId": "temperature-sensor-456",
+    "properties": {
+      "desired": {
+        "samplingInterval": 600
+    },
+    "reported": {
+      "currentTemperature": 70,
+      "batteryLevel": 0.95,
+      "isConnected": true
+    }
+  },
+  "tags": {
+    "location": "greenhouse"
+  },
+  "metadata": {
+    "type": "humidity sensor"
+  }
+}
+
+Page 10
+---------------------
+
+using Microsoft.Azure.Devices;
+
+// Connect to the IoT hub
+string connectionString = "HostName=<IoT hub name>.azure-devices.net;
+SharedAccessKeyName=<policy name>;
+SharedAccessKey=<policy key>";
+ServiceClient serviceClient = ServiceClient.CreateFromConnectionString(connectionString);
+
+// Retrieve the device twin for the device
+string deviceId = "<device ID>";
+Twin twin = await serviceClient.GetTwinAsync(deviceId);
+
+// Read the desired properties from the device twin
+double targetTemperature = twin.Properties.Desired["targetTemperature"];
+
+// Update the device's internal temperature control settings
+UpdateTemperatureControlSettings(targetTemperature);
+
+// Report the current state back to the device twin
+var patch = new
+{
+  currentTemperature = GetCurrentTemperature(),
+  batteryLevel = GetBatteryLevel(),
+  isOn = IsOn()
+};
+await serviceClient.UpdateReportedPropertiesAsync(deviceId, patch);
+
+Page 14
+---------------------
+
+az extension add --name azure-iot
+
+
+az iot hub device-identity list --hub-name {YourIoTHubName}

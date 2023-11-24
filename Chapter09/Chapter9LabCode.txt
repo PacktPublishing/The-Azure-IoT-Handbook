@@ -1,0 +1,72 @@
+Step 2
+----------
+
+az group create –name IoTEdgeResources --location eastus2
+
+Step 3
+----------
+
+your own value:
+az iot hub create --resource-group IoTEdgeResources --name {hub_
+name} --sku F1 --partition-count 2
+
+
+Step 4
+---------
+
+az iot hub device-identity create --device-id myEdgeDevice
+--edge-enabled --hub-name {hub_name}
+
+
+step 5
+----------
+
+az deployment group create \
+--resource-group IoTEdgeResources \
+--template-uri "https://raw.githubusercontent.com/Azure/iotedgevm-deploy/1.4/edgeDeploy.json" \
+--parameters dnsLabelPrefix='<REPLACE_WITH_VM_NAME>' \
+--parameters adminUsername='azureUser' \
+--parameters deviceConnectionString=$(az iot hub device-identity
+connection-string show --device-id myEdgeDevice --hub-name <REPLACE_WITH_HUB_NAME> -o tsv) \
+--parameters authenticationType='password' \
+--parameters adminPasswordOrKey="<REPLACE_WITH_PASSWORD>"
+
+step 16
+----------
+
+SELECT 'reset' AS command
+[your output]
+FROM
+[your input] TIMESTAMP BY timeCreate
+GROUP BY TumblingWindow(second,30)
+HAVING Avg(machine.temperature) > 70
+
+step 19
+----------
+
+Route Name | Value
+------------- | ----------------------
+telemetryToCloud | FROM /messages/modules/
+SimulatedTemperatureSensor/* INTO $upstream
+alertsToCloud | FROM /messages/modules/{moduleName}/* INTO
+$upstream
+alertsToReset | FROM /messages/modules/{moduleName}/* INTO
+BrokeredEndpoint("/modules/SimulatedTemperatureSensor/inputs/control")
+
+Step 21
+----------
+
+{
+    "schemaVersion": "1.0",
+    "sasUrl": "<sasUrl>",
+    "items": [
+        {
+            "id": "edgeAgent",
+            "filter": {
+            "tail": 10
+            }
+        }
+    ],
+    "encoding": "none",
+    "contentType": "text"
+}

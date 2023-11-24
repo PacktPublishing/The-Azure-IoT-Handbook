@@ -1,0 +1,21 @@
+Page 5
+----------
+.create table Telemetry ( messageId: int, deviceId: string,
+temperature:decimal, humidity:decimal, temperatureAlert: string,
+IotHubDeviceId: string, IotHubEnqueuedTime: datetime )
+
+
+
+.alter table Telemetry policy streamingingestion enable
+
+
+
+.create table Telemetry ingestion json mapping "JsonTelemetryMapping"
+'[' '{"Column": "messageId", "Properties": {"Path": "$.messageId"}},'
+'{"Column": "deviceId", "Properties": {"Path": "$.deviceId"}},'
+'{"Column": "temperature", "Properties": {"Path": "$.temperature"}},'
+'{"Column": "humidity", "Properties": {"Path": "$.humidity"}},'
+'{"Column": "temperatureAlert", "Properties": {"Path":
+"$.Properties.temperatureAlert"}},' '{ "column" : "IotHubDeviceId",
+"Properties":{"Path":"$.iothub-connection-device-id"}},'
+'{"Column": "IotHubEnqueuedTime", "Properties": {"Path": "$.iothubenqueuedtime"}}' ']'
